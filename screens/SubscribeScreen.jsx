@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { 
     StyleSheet,
     ScrollView,
@@ -11,7 +11,7 @@ import {
     Alert,
 } from 'react-native';
 
-import { validateEmail } from './utils';
+import { validateEmail } from '../utils';
 
 const styles = StyleSheet.create({
     container: {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         height: 100,
     },
     messageContainer: {
-        // flexBasis: 100,
+        
     },
     messageText: {
         fontSize: 20,
@@ -85,7 +85,7 @@ const showAlert = () => {
     }
 }
 
-export default function SignupScreen({ navigation }) {
+export default function SubscribeScreen({ navigation }) {
     const [email, onChangeEmail] = useState('');
     const isEmailValid = !!validateEmail(email);
     
@@ -96,7 +96,7 @@ export default function SignupScreen({ navigation }) {
         <View style={styles.logoContainer}>
             <Image
                 style={styles.logoImage}
-                source={require('./assets/little-lemon-logo-grey.png')}
+                source={require('../assets/little-lemon-logo-grey.png')}
                 accessible={true}
                 accessibilityLabel='Little Lemon logo'
                 resizeMode='contain'

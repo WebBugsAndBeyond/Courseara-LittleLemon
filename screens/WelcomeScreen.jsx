@@ -50,7 +50,7 @@ export default function WelcomeScreen({ navigation }) {
         <View style={styles.logoContainer}>
             <Image
                 style={styles.logoImage}
-                source={require('./assets/little-lemon-logo.png')}
+                source={require('../assets/little-lemon-logo.png')}
                 accessible={true}
                 accessibilityLabel='Little Lemon logo'
                 resizeMode='contain'
