@@ -7,6 +7,7 @@ import {
     Text,
     TextInput,
     Pressable,
+    Platform,
     Alert,
 } from 'react-native';
 
@@ -77,7 +78,11 @@ const styles = StyleSheet.create({
 
 
 const showAlert = () => {
-    alert('Thanks for subscribing, stay tuned!');
+    if (Platform.OS === 'web') {
+        alert('Thanks for subscribing, stay tuned!');
+    } else {
+        Alert.alert('Little Lemon Newsletter', 'Thanks for subscribing, stay tuned!', [{ text: 'OK' }]);
+    }
 }
 
 export default function SignupScreen({ navigation }) {
